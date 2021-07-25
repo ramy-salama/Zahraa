@@ -1,0 +1,358 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900);
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto Slab", Arial, sans-serif;
+    top: 0;
+    margin: 0;
+}
+
+.container {
+    overflow: hidden;
+    display: grid; 
+    grid-template-columns: repeat(8,1fr); 
+    grid-auto-rows: minmax(50px,auto); 
+    gap: 1%;
+}
+
+/* Start Search-page */
+.contner-search-hide{
+    display: none;
+}
+
+.contner-search-show {
+    display: block;
+}
+
+.search-hide {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: #fff;
+}
+
+.search-hide input {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;;
+    color: rgb(151, 148, 148);
+    padding: 15px 25px;
+    font-size: 30px;
+    cursor: pointer;
+    border-style: none;
+    border-bottom: 1px rgb(116, 116, 0) solid;
+}
+
+.search-hide .research{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60%;
+    color:rgb(151, 148, 148) ;
+    transform: translate(-10%, -50%);
+    cursor: pointer;
+    font-size: 50px;
+}
+
+.search-hide .closed {
+    width: 40px;
+    height: 40px;
+    padding: 50px 0 0 85%;
+    cursor: pointer;
+}
+
+/* End Search-page */
+/* Start Header */
+
+.head-count {
+    z-index: 2;
+    background-color: #f6f6f6;
+    width: 100%;
+    position: fixed;
+    grid-column: 1/9;
+    display: grid;
+    grid-auto-columns: repeat(9,1fr);
+    grid-auto-rows: minmax(50px,auto);
+    grid-template-areas: 
+        "in in in in me me to to to"
+        "in in in in me me to to to"
+    ;
+    gap: .5%;
+}
+
+.media {
+    grid-area: me;
+}
+
+.media ion-icon{
+    padding: 35px 0 0 15px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.media ion-icon:first-child:hover {
+    color: rgb(185, 109, 58);
+}
+.media ion-icon:nth-child(2):hover {
+    color: #ff0000;
+}
+.media ion-icon:nth-child(3):hover {
+    color: #1da1f2;
+}
+.media ion-icon:last-child:hover {
+    color: #4869ae;
+}
+
+/****************************/
+.info-head {
+    text-align: right;
+    width: 90%;
+    margin: 0 auto 0;
+    padding: 2%;
+    font-size: 24px;
+    overflow: hidden;
+    grid-area: in;
+}
+
+.info-head .logo {
+    float: left;
+    width: 50%;
+}
+
+.info-head .logo img {
+    width: 200px;
+    height: 70px;
+}
+/****************************/
+.toggle-count {
+    grid-area: to;
+}
+
+.toggle {
+    padding: 45px 0 0 0;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.toggle ion-icon {
+    position: absolute;
+    font-size: 35px;
+    display: none;
+}
+
+.toggle ion-icon.open,
+.toggle.active ion-icon.close {
+    display: block;
+}
+
+.toggle ion-icon.close,
+.toggle.active ion-icon.open {
+    display: none;
+}
+
+/* End Header */
+/* Start Nav */
+
+.hide,
+.show {
+    text-align: left;
+    transition: all 1s ;
+    width: 200px;
+    height: 100%;
+    line-height: 30px;
+    color: #000;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: #f6f6f6;
+    display: none;
+    z-index: 5;
+}
+
+.show {
+    display: block;
+}
+/****************************/
+.hide .menu{
+    display: none;
+}
+
+.hide .Features{
+    display: block;
+}
+
+.hide label {
+    display: block;
+}
+
+.hide label .rotate {
+    transform: rotate(180deg);
+}
+
+.hide label:hover {
+    color: rgb(185, 109, 58);
+}
+
+.hide li {
+    cursor: pointer;
+    line-height: 48px;
+    list-style: none;
+}
+
+.hide a{
+    text-decoration: none;
+    color: #000;
+}
+
+.hide a:hover {
+    color: #6d6a6a;
+}
+
+/* End Nav */
+/* Start Boxes Container */
+
+.box {
+    background-size: cover;
+}
+
+.img-count {
+    grid-column: 1/9;
+    
+    display: grid;
+    grid-auto-columns: repeat(8,1fr);
+    grid-auto-rows: minmax(40px,60px);
+    grid-template-areas: 
+        "hd1 hd1 hd1 hd1 hd2 hd2 hd3 hd3"
+        "hd1 hd1 hd1 hd1 hd2 hd2 hd3 hd3"
+        "hd1 hd1 hd1 hd1 hd2 hd2 hd3 hd3"
+        "hd1 hd1 hd1 hd1 hd2 hd2 hd3 hd3"
+        "hd1 hd1 hd1 hd1 hd2 hd2 hd3 hd3"
+        "hd1 hd1 hd1 hd1 hd2 hd2 hd4 hd4"
+        "hd1 hd1 hd1 hd1 hd2 hd2 hd4 hd4"
+        "hd1 hd1 hd1 hd1 hd2 hd2 hd4 hd4"
+        "hd1 hd1 hd1 hd1 hd2 hd2 hd4 hd4"
+    ;
+    gap: .5%;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: super;
+}
+
+.img-hide1 {
+    grid-area: hd1;
+
+}
+.img-hide2 {
+    grid-area: hd2;
+}
+.img-hide3 {
+    grid-area: hd3;
+}
+.img-hide4 {
+    grid-area: hd4;
+}
+
+.img-count .btn {
+    background-color: #f32196;
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+    font-size: 14px;
+    top: -200px;
+    left: 20px;
+    padding: 2px 5px;
+}
+
+.img-count .title{
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-decoration: none;
+    top: -200px;
+    left: 20px;
+    
+}
+
+.img-count .link,
+.img-count span {
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-decoration: none;
+    top: -200px;
+    left: 20px;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.img-hide3 .btn {
+    top: -150px;
+}
+
+.img-hide3 .title {
+    top: -150px;
+}
+
+.img-hide3 span {
+    top: -150px;
+}
+
+@media (max-width:500px) {
+    .media ion-icon{
+        padding: 35px 0 0 3px;
+        width: 20px;
+        height: 20px;
+    }
+    .info-head .logo img {
+        width: 150px;
+        padding-right: 25px;
+    }
+}
+
+@media (max-width:980px) {
+    .img-count {
+        grid-auto-rows: minmax(150px,180px);
+        grid-template-areas: 
+            "hd1 hd1 hd1 hd1 hd1 hd1 hd1 hd1"
+            "hd1 hd1 hd1 hd1 hd1 hd1 hd1 hd1"
+            "hd2 hd2 hd2 hd2 hd2 hd2 hd2 hd2"
+            "hd3 hd3 hd3 hd3 hd3 hd3 hd3 hd3"
+            "hd4 hd4 hd4 hd4 hd4 hd4 hd4 hd4"
+        ;
+
+    }
+    .img-count .btn {
+    
+        top: -170px;
+
+
+    }
+    
+    .img-count .title {
+
+        top: -170px;
+
+        
+    }
+
+    .img-count .link,
+.img-count span {
+    top: -180px;
+}
+    
+}
