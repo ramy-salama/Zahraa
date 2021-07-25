@@ -1,5 +1,6 @@
-let menuToggle = document.querySelector('.toggle'),
+let   menuToggle = document.querySelector('.toggle'),
     myside = document.querySelector("#sidebar"),
+    myScreen= document.querySelector("#screen-id"),
     menuTitle1 = document.querySelector('.title1'),
     mylist1 = document.querySelector("#list1"),
     myicon1 = document.querySelector("#icon1"),
@@ -11,8 +12,15 @@ let menuToggle = document.querySelector('.toggle'),
     closing = document.querySelector("#closing");
 
     menuToggle.onclick = () => {
+        myScreen.classList.toggle('screen-show'),
         menuToggle.classList.toggle('active'),
         myside.classList.toggle("show")
+    }
+
+    myScreen.onclick = () => {
+        myScreen.classList.remove('screen-show'),
+        menuToggle.classList.remove('active'),
+        myside.classList.remove("show")
     }
     
     menuTitle1.onclick = () => {

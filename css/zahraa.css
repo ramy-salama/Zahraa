@@ -9,12 +9,18 @@ body {
     margin: 0;
 }
 
-.container {
-    overflow: hidden;
-    display: grid; 
-    grid-template-columns: repeat(8,1fr); 
-    grid-auto-rows: minmax(50px,auto); 
-    gap: 1%;
+.screen{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.screen-show{
+    display: block;
 }
 
 /* Start Search-page */
@@ -72,6 +78,14 @@ body {
 /* End Search-page */
 /* Start Header */
 
+.container {
+    overflow: hidden;
+    display: grid; 
+    grid-template-columns: repeat(8,1fr); 
+    grid-auto-rows: minmax(50px,auto); 
+    gap: 1%;
+}
+
 .head-count {
     z-index: 2;
     background-color: #f6f6f6;
@@ -80,7 +94,7 @@ body {
     grid-column: 1/9;
     display: grid;
     grid-auto-columns: repeat(9,1fr);
-    grid-auto-rows: minmax(50px,auto);
+    grid-auto-rows: max(30px);
     grid-template-areas: 
         "in in in in me me to to to"
         "in in in in me me to to to"
@@ -90,26 +104,29 @@ body {
 
 .media {
     grid-area: me;
+
 }
 
 .media ion-icon{
-    padding: 35px 0 0 15px;
+    padding: 20px 0 0 15px;
     width: 25px;
     height: 25px;
     cursor: pointer;
+    float: right;
+    direction: rtl;
 }
 
 .media ion-icon:first-child:hover {
-    color: rgb(185, 109, 58);
-}
-.media ion-icon:nth-child(2):hover {
     color: #ff0000;
 }
-.media ion-icon:nth-child(3):hover {
+.media ion-icon:nth-child(2):hover {
     color: #1da1f2;
 }
-.media ion-icon:last-child:hover {
+.media ion-icon:nth-child(3):hover {
     color: #4869ae;
+}
+.media ion-icon:last-child:hover {
+    color: rgb(185, 109, 58);
 }
 
 /****************************/
@@ -125,12 +142,11 @@ body {
 
 .info-head .logo {
     float: left;
-    width: 50%;
 }
 
 .info-head .logo img {
     width: 200px;
-    height: 70px;
+    height: 50px;
 }
 /****************************/
 .toggle-count {
@@ -138,13 +154,12 @@ body {
 }
 
 .toggle {
-    padding: 45px 0 0 0;
+    padding: 20px;
     cursor: pointer;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .toggle ion-icon {
@@ -168,22 +183,25 @@ body {
 
 .hide,
 .show {
+    position: fixed;
+    padding: 50px 30px;
     text-align: left;
     transition: all 1s ;
-    width: 200px;
+    width: 280px;
     height: 100%;
     line-height: 30px;
     color: #000;
     left: 0;
     top: 0;
+    left: -280px;
     position: fixed;
     background-color: #f6f6f6;
-    display: none;
     z-index: 5;
+    transition: all .3s ease-in;
 }
 
 .show {
-    display: block;
+    left: 0px;
 }
 /****************************/
 .hide .menu{
@@ -314,13 +332,13 @@ body {
 
 @media (max-width:500px) {
     .media ion-icon{
-        padding: 35px 0 0 3px;
+        padding: 25px 0 0 3px;
         width: 20px;
         height: 20px;
     }
     .info-head .logo img {
         width: 150px;
-        padding-right: 25px;
+        padding-right: 35px;
     }
 }
 
@@ -339,20 +357,16 @@ body {
     .img-count .btn {
     
         top: -170px;
-
-
     }
     
     .img-count .title {
 
-        top: -170px;
-
-        
+        top: -170px;   
     }
 
     .img-count .link,
-.img-count span {
-    top: -180px;
-}
+    .img-count span {
+        top: -180px;
+    }
     
 }
