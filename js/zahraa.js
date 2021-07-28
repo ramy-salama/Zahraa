@@ -1,4 +1,5 @@
-let   menuToggle = document.querySelector('.toggle'),
+let menuToggle = document.querySelector('.toggle'),
+    menuToggleMob = document.querySelector('.toggle-mob'),
     myside = document.querySelector("#sidebar"),
     myScreen= document.querySelector("#screen-id"),
     menuTitle1 = document.querySelector('.title1'),
@@ -8,7 +9,9 @@ let   menuToggle = document.querySelector('.toggle'),
     mylist2 = document.querySelector("#list2"),
     myicon2 = document.querySelector("#icon2"),
     searchIcon = document.querySelector('.search-icon'),
+    searchIconMob = document.querySelector('.search-icon-mob'),
     searching = document.querySelector("#searching"),
+    closingSid = document.querySelector("#closing-sid"),
     closing = document.querySelector("#closing");
 
     menuToggle.onclick = () => {
@@ -17,12 +20,23 @@ let   menuToggle = document.querySelector('.toggle'),
         myside.classList.toggle("show")
     }
 
+    menuToggleMob.onclick = () => {
+        myScreen.classList.toggle('screen-show'),
+        myside.classList.toggle("show")
+    }
+
     myScreen.onclick = () => {
         myScreen.classList.remove('screen-show'),
         menuToggle.classList.remove('active'),
         myside.classList.remove("show")
     }
-    
+
+    closingSid.onclick = () => {
+        myScreen.classList.remove('screen-show'),
+        menuToggle.classList.remove('active'),
+        myside.classList.remove("show")
+    }
+
     menuTitle1.onclick = () => {
         myicon1.classList.toggle('rotate'),
         mylist1.classList.toggle("Features")
@@ -34,6 +48,10 @@ let   menuToggle = document.querySelector('.toggle'),
     }
 
     searchIcon.onclick = () => {
+        searching.classList.add("contner-search-show");
+    }
+
+    searchIconMob.onclick = () => {
         searching.classList.add("contner-search-show");
     }
 

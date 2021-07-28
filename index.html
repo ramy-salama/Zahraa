@@ -7,73 +7,34 @@
     <link rel="stylesheet" href="css/zahraa.css">
 </head>
 <body>
-    <div id="screen-id" class="screen"></div>
+    <!-- Start Media mob -->
+    <nav class="head-count-mob">
+            <section class="logo-mob">  
+                <img src="img/logo.png" alt="">
+            </section>
+            <section class="search-mob">
+                <ion-icon class="search-icon-mob" name="search-outline"></ion-icon>
+            </section>
+            <section id="toggle-id-mob" class="toggle-mob">
+                <ion-icon name="menu-outline" class="open-mob"></ion-icon>
+            </section>
+            
+    </nav>
+    <!-- End Media mob --> 
+    <article id="screen-id" class="screen"></article>
     
-    <div id="searching" class="contner-search-hide">
-        <div class="search-hide">
+    <article id="searching" class="contner-search-hide">
+        <section class="search-hide">
             <input autocomplete="off" name="q" placeholder="Search" type="text">
             <ion-icon class="research" name="search-outline"></ion-icon>
             <ion-icon id="closing" class="closed" name="close-outline"></ion-icon>
-        </div>
-    </div>
-    <!-- Start Container -->
-    <div class="container">
-        <!-- Start Head Cout -->
-        <section class="head-count">
-            <!-- Start Social Media -->
-            <article class="media">
-                <ion-icon name="logo-youtube"></ion-icon>
-                <ion-icon name="logo-twitter"></ion-icon>
-                <ion-icon name="logo-facebook"></ion-icon>
-                <ion-icon class="search-icon" name="search-outline"></ion-icon>
-            </article>
-            <!-- Start Info Head -->
-            <article class="info-head">
-                <div class="logo">
-                    <img src="img/logo.png" alt="">
-                </div>
-            </article>
-            <!-- Start Toggle -->
-            <article class="toggle-count">
-                <div id="toggle-id" class="toggle">
-                    <ion-icon name="menu-outline" class="open"></ion-icon>
-                    <ion-icon name="close-outline" class="close"></ion-icon>
-                </div>
-            </article>
         </section>
-        <!-- Start Img Count -->
-        <section class="img-count">
-            <div class="box img-hide1">
-                <img class="image" src="img/1.jpg" alt="">
-                <a href="#" class="btn">WORLD</a>
-                <a href="#" class="title">
-                    <h2>Efficiently Deploy <br> Performance Based Innovation</h2></a>
-                    <a class="link" href="#">KARLA DOE</a>
-                    <span>  FEBRUARY 14, 2019</span>
-            </div>
-            <div class="box img-hide2">
-                <img class="image" src="img/2.jpg" alt="">
-                <a href="#" class="btn">TECH</a>
-                <a href="#" class="title"><h4>Globally Customize <br> Reliable</h4></a>
-                <span>FEBRUARY 11, 2019</span>  
-            </div>
-            <div class="box img-hide3">
-                <img class="image" src="img/3.jpg" alt="">
-                <a href="#" class="btn">BUSINESS</a>
-                <a href="#" class="title"><h4>Seitan High Life <br> Reprehenderit </h4></a>
-                <span>FEBRUARY 10, 2019</span>
-            </div>
-            <div class="box img-hide4">
-                <img class="image" src="img/4.jpg" alt="">
-                <a href="#" class="btn">ENTERTAINMENT</a>
-                <a href="#" class="title"><h4>Coronavirus Proident <br> Chillwave Deep V</h4></a>
-                <span>FEBRUARY 10, 2019</span>
-            </div>
-        </section>
-    </div>
-    
+    </article>
     <nav>
         <div id="sidebar" class="hide">
+            <div class="closed-sid">
+                <ion-icon id="closing-sid" class="close-sid" name="close-outline"></ion-icon>
+            </div>
             <ul>
                 <label> <a href="#">Home</a> </label>  
                 <label class="title1"> Features <ion-icon id="icon1" name="chevron-down-outline"></ion-icon> </label>
@@ -89,6 +50,79 @@
             </ul>
         </div>
     </nav>
+    <!-- Start Container -->
+    <div class="container">
+        <!-- Start Head Cout -->
+        <nav class="head-count">
+            <article class="logo-toggle">
+                <section id="toggle-id" class="toggle">
+                    <ion-icon name="menu-outline" class="open"></ion-icon>
+                    <ion-icon name="close-outline" class="close"></ion-icon>
+                </section>
+                <section class="logo">  
+                    <img src="img/logo.png" alt="">
+                </section>
+            </article>
+            
+            <article class="links">
+                <section class="home"> 
+                    <a href="#">Home</a> 
+                </section>
+                <section class="Features">
+                    <span class="lable1">Features<ion-icon id="icon1" name="chevron-down-outline"></ion-icon></span>
+                    <ul class="menu1">
+                        <li><a href="#">Grid Layout</a></li>
+                        <li><a href="#">List Layout</a></li>
+                    </ul>
+                </section>
+                <section class="Labels">
+                    <span class="lable2"> Labels <ion-icon id="icon2" name="chevron-down-outline"></ion-icon></span> 
+                    <ul class="menu2">
+                        <li><a href="#">Girl</a></li>
+                        <li><a href="#">Fashion</a></li>
+                    </ul>
+                </section>
+            </article>
+
+            <article class="media">
+                <ion-icon name="logo-youtube"></ion-icon>
+                <ion-icon name="logo-twitter"></ion-icon>
+                <ion-icon name="logo-facebook"></ion-icon>
+                <ion-icon class="search-icon" name="search-outline"></ion-icon>
+            </article>
+        </nav>
+        <!-- Start Img Count -->
+        <article class="img-count">
+            <section class="box img-hide1">
+                <img class="image" src="img/1.jpg" alt="">
+                <a href="#" class="btn">WORLD</a>
+                <a href="#" class="title">
+                    <h2>Efficiently Deploy <br> Performance Based Innovation</h2></a>
+                    <a class="link" href="#">KARLA DOE</a>
+                    <span>  FEBRUARY 14, 2019</span>
+            </section>
+            <section class="box img-hide2">
+                <img class="image" src="img/2.jpg" alt="">
+                <a href="#" class="btn">TECH</a>
+                <a href="#" class="title"><h4>Globally Customize <br> Reliable</h4></a>
+                <span>FEBRUARY 11, 2019</span>  
+            </section>
+            <section class="box img-hide3">
+                <img class="image" src="img/3.jpg" alt="">
+                <a href="#" class="btn">BUSINESS</a>
+                <a href="#" class="title"><h4>Seitan High Life <br> Reprehenderit </h4></a>
+                <span>FEBRUARY 10, 2019</span>
+            </section>
+            <section class="box img-hide4">
+                <img class="image" src="img/4.jpg" alt="">
+                <a href="#" class="btn">ENTERTAINMENT</a>
+                <a href="#" class="title"><h4>Coronavirus Proident <br> Chillwave Deep V</h4></a>
+                <span>FEBRUARY 10, 2019</span>
+            </section>
+        </article>
+    </div>
+    
+    
     <script src="js/zahraa.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
